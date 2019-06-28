@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>注册</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="{{__HOST__}}/css/layui.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/register.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/linearicons.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/flaticon.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/animate.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/bootsnav.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/style.css">
+</head>
+
+<body style="background-image: url('{{__HOST__}}/img/bg1 (2).jpg');">
+<section class="top-area">
+    <div class="header-area">
+        <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
+             data-minus-value-mobile="55" data-speed="1000">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span>pillar</span>职业分析平台</a>
+                </div>
+
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class=" scroll active"><a href="{{__HOST__}}/">首页</a></li>
+                        <li class="scroll"><a href="#works">平台简介</a></li>
+                        <li class="scroll"><a href="{{__HOST__}}/shujufenxi">大数据分析</a></li>
+                        <li class="scroll"><a href="">专业分析</a></li>
+                        <li class="scroll"><a href="{{__HOST__}}/search">职位查询</a></li>
+                        <li class="scroll"><a href="{{__HOST__}}/admin">个人中心</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="clearfix"></div>
+</section>
+<div class="layui-main user">
+
+    <div class="layui-clear main">
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend class="text-white">注册</legend>
+        </fieldset>
+        <div class="layui-form layui-form-pane">
+            <div class="layui-form">
+                <form action="{{__HOST__}}/admin/register/doregister" method="post" class="layui-form">
+                    <div class="layui-form-item">
+                        <input class="layui-input" id="username" name="username" placeholder="请输入用户名" type="text"
+                               maxlength="11"
+                               lay-verify="required|username|regexit" autofocus="autofocus" autocomplete="off">
+                    </div>
+                    <div class="layui-form-item">
+                        <input class="layui-input" id="phone" name="phone" placeholder="请输入手机号" type="text"
+                               maxlength="11"
+                               lay-verify="required|phone|regexit" autofocus="autofocus" autocomplete="off">
+                    </div>
+                    <div class="layui-form-item">
+                        <input class="layui-input" id="password" name="password" placeholder="请输入密码" type="password"
+                               maxlength="20"
+                               lay-verify="required|pwd" autocomplete="off">
+                    </div>
+                    <div class="layui-form-item">
+                        <input class="layui-input" id="password-again" name="repassword" placeholder="请再次输入密码"
+                               type="password"
+                               maxlength="20"
+                               lay-verify="required|rePwd" autocomplete="off">
+                    </div>
+                    <div class="layui-form-item">
+                        <button id="reg" type="submit" class="login_btn layui-btn layui-btn-radius layui-btn-normal"
+                                lay-submit lay-filter="register">立即注册
+                        </button>
+                    </div>
+                    <div>
+                        <small class="text-white">已经有账户了？</small>
+                        <a href="{{__HOST__}}/admin/login">点此登录</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+</html>

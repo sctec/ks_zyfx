@@ -1,0 +1,22 @@
+.zhiye-search {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.zhiye-table {
+    width: 1150px;
+    margin: 0 auto;
+}
+
+.table-hover {
+    margin-right: 100px;
+}
+
+.chaxunbutton {
+    background: #ff545a;
+    color: #ffffff;
+}
+
+.top-area .navbar .container {
+    border-bottom: 2px solid #ff545a;
+}

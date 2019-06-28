@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>职业查询</title>
+    <link rel="stylesheet" href="{{__HOST__}}/css/linearicons.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/flaticon.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/animate.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/bootsnav.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/style.css">
+    <link rel="stylesheet" href="{{__HOST__}}/css/search.css">
+</head>
+<body>
+<section class="top-area">
+    <div class="header-area">
+        <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy" data-minus-value-desktop="70"
+             data-minus-value-mobile="55" data-speed="1000">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><span>pillar</span>职业分析平台</a>
+                </div>
+
+                <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li class=" scroll active"><a href="{{__HOST__}}/">首页</a></li>
+                        <li class="scroll"><a href="#works">平台简介</a></li>
+                        <li class="scroll"><a href="{{__HOST__}}/shujufenxi">大数据分析</a></li>
+                        <li class="scroll"><a href="">专业分析</a></li>
+                        <li class="scroll"><a href="{{__HOST__}}/search">职位查询</a></li>
+                        <li class="scroll"><a href="{{__HOST__}}/admin">个人中心</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="clearfix"></div>
+</section>
+<div class="zhiiyetaable">
+    <div class="zhiye-search">
+        <form action="{{__HOST__}}/search" method="post" class="navbar-form" role="search">
+            <div class="form-group">
+                <input name="name" type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default chaxunbutton">查询</button>
+        </form>
+    </div>
+
+    <table class="zhiye-table table table-hover">
+        <thead>
+        <tr>
+            <th>职位名称</th>
+            <th>工作城市</th>
+            <th>行业类别</th>
+            <th>学历要求</th>
+            <th>职位来源</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{each list}}
+        <tr>
+            <td>{{$value.name}}</td>
+            <td>{{$value.city}}</td>
+            <td>{{$value.category}}</td>
+            <td>{{$value.education}}</td>
+            <td>{{$value.source}}</td>
+        </tr>
+        {{/each}}
+        </tbody>
+
+    </table>
+</div>
+</body>
+</html>

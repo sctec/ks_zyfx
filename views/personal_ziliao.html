@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <link rel="stylesheet" href="{{__HOST__}}/css/personal.css">
+</head>
+<body>
+<div class="mainNav">
+    <div class="content">
+        <p class="home_page">
+            <a class="zhuye" href="{{__HOST__}}/">主页</a>
+            <!--<a class="gerenzhongxin" href="#">| 个人中心 |</a>-->
+            <a class="gerenzhongxin" href="{{__HOST__}}/admin/login/loginout">退出登录</a>
+        </p>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+    <div class="left_box">
+        <ul class="aside">
+            <li class="selecct"><a href="{{__HOST__}}/admin" class="zl">个人资料</a></li>
+            <!--<li><a href="#" class="zl">修改资料</a></li>-->
+        </ul>
+    </div>
+    <div class="view-container">
+        <div class="cont view">
+            <div class="right_cont"><h3 class="title">个人资料</h3>
+                <div class="user_info">
+                    <div class="header"><img src="http://p.meifajie.com/pic/58101403915021.jpg" alt="" class="head">
+                        <!---->
+                        <div class="right_c">
+                            <div class="line"></div>
+                            <ul class="self">
+                                <li class="comon">用户名：<span class="username">{{@username}}</span></li>
+                                <!--<li class="comon">实名：<span class="name">梁柱</span></li>-->
+                                <li class="comon">性别：<span class="sex">男</span></li>
+                                <li class="comon">地区：<span class="site">山西</span></li>
+                                <li class="comon">手机号：<span class="phone">{{@phone}}</span></li>
+                                <!--<li class="comon last">邮箱：<span class="email">scteclz@163.com</span></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
